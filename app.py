@@ -33,6 +33,7 @@ import traceback
 import requests
 from time import sleep
 import xmltodict
+from gevent.pywsgi import WSGIServer
 #Logging
 
 dictConfig(
@@ -1343,5 +1344,10 @@ def start_scan():
     return response
 
 if __name__ == '__main__':
-    app.run(host= '10.200.102.145', port=5000, debug=True)
+        app.debug = True 
+        http_server = WSGIServer(('', 5000), app)
+        http_server.serve_forever()
+
+
+    # app.run(host= '10.200.102.145', port=5000, debug=True)
 

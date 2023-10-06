@@ -8,3 +8,4 @@ xmltodict
 requests
 docker
 pexpect
+gevent
