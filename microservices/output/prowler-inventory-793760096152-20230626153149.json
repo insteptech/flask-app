@@ -1,0 +1,52 @@
+[
+    {
+        "AWS_AccountID": "793760096152",
+        "AWS_Region": "",
+        "AWS_Partition": "aws",
+        "AWS_Service": "iam",
+        "AWS_ResourceType": "policy",
+        "AWS_ResourceID": "custom-prowler-policy",
+        "AWS_ResourceARN": "arn:aws:iam::793760096152:policy/custom-prowler-policy",
+        "AWS_Tags": null
+    },
+    {
+        "AWS_AccountID": "793760096152",
+        "AWS_Region": "",
+        "AWS_Partition": "aws",
+        "AWS_Service": "iam",
+        "AWS_ResourceType": "policy",
+        "AWS_ResourceID": "AWSLambdaBasicExecutionRole-ed24d2c5-48b3-4e7a-bd14-fc618a8d1a51",
+        "AWS_ResourceARN": "arn:aws:iam::793760096152:policy/service-role/AWSLambdaBasicExecutionRole-ed24d2c5-48b3-4e7a-bd14-fc618a8d1a51",
+        "AWS_Tags": null
+    },
+    {
+        "AWS_AccountID": "793760096152",
+        "AWS_Region": "",
+        "AWS_Partition": "aws",
+        "AWS_Service": "iam",
+        "AWS_ResourceType": "role",
+        "AWS_ResourceID": "cloudmapper-lambda-role-4cof3lj2",
+        "AWS_ResourceARN": "arn:aws:iam::793760096152:role/service-role/cloudmapper-lambda-role-4cof3lj2",
+        "AWS_Tags": null
+    },
+    {
+        "AWS_AccountID": "793760096152",
+        "AWS_Region": "",
+        "AWS_Partition": "aws",
+        "AWS_Service": "iam",
+        "AWS_ResourceType": "user",
+        "AWS_ResourceID": "test-user",
+        "AWS_ResourceARN": "arn:aws:iam::793760096152:user/test-user",
+        "AWS_Tags": null
+    },
+    {
+        "AWS_AccountID": "793760096152",
+        "AWS_Region": "us-east-1",
+        "AWS_Partition": "aws",
+        "AWS_Service": "s3",
+        "AWS_ResourceType": "bucket",
+        "AWS_ResourceID": "new-bucket-test-prowler",
+        "AWS_ResourceARN": "arn:aws:s3:us-east-1::new-bucket-test-prowler",
+        "AWS_Tags": []
+    }
+]

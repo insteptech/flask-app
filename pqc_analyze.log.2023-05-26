@@ -1,0 +1,718 @@
+[May 23, 2023 18:33:09 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 18:33:09 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 18:39:54 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 18:39:54 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 18:40:41 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:40:41] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:40:41 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:40:41] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loading modules ...
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package name: sslscan.module.handler
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.handler' from '/usr/local/lib/python3.9/site-packages/sslscan/module/handler/__init__.py'>
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/handler
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.smtp' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.tcp' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.http' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.rdp' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:40:41] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.imap' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.ldap' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.pop3' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.udp' successfully
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package name: sslscan.module.rating
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.rating' from '/usr/local/lib/python3.9/site-packages/sslscan/module/rating/__init__.py'>
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/rating
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.rbsec' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.ssllabs' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.builtin' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.none' successfully
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package name: sslscan.module.report
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.report' from '/usr/local/lib/python3.9/site-packages/sslscan/module/report/__init__.py'>
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/report
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.report.terminal' successfully
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package name: sslscan.module.scan
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.scan' from '/usr/local/lib/python3.9/site-packages/sslscan/module/scan/__init__.py'>
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/scan
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_imap' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.client_ciphers' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_ciphers' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.vuln_heartbleed' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_scsv' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_elliptic_curves' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_http' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_certificate' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_renegotiation' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_compression' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_smtp' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_preferred_ciphers' successfully
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_pop3' successfully
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value 'ssl2' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value of option 'ssl2' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value 'ssl3' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value of option 'ssl3' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value 'tls10' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value of option 'tls10' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value 'tls11' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value of option 'tls11' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value 'tls12' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | config] Set value of option 'tls12' to 'True'
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Loading handler from URI: google.com
+[May 23, 2023 18:40:41 UTC] [DEBUG | __init__] Extracted config values: {}
+[May 23, 2023 18:40:41 UTC] [INFO | __init__] Running scan module '<sslscan.module.scan.server_ciphers.ServerCiphers object at 0xffff82204f70>' ...
+[May 23, 2023 18:40:46 UTC] [DEBUG | tcp] Time delta: 5.08s -> Time to sleep: -4.98s
+[May 23, 2023 18:40:47 UTC] [DEBUG | tcp] Time delta: 0.15s -> Time to sleep: -0.05s
+[May 23, 2023 18:40:47 UTC] [DEBUG | tcp] Time delta: 0.15s -> Time to sleep: -0.05s
+[May 23, 2023 18:40:47 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:47 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:47 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:47 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:48 UTC] [DEBUG | tcp] Time delta: 0.16s -> Time to sleep: -0.06s
+[May 23, 2023 18:40:48 UTC] [DEBUG | tcp] Time delta: 0.16s -> Time to sleep: -0.06s
+[May 23, 2023 18:40:48 UTC] [DEBUG | tcp] Time delta: 0.16s -> Time to sleep: -0.06s
+[May 23, 2023 18:40:48 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:48 UTC] [DEBUG | tcp] Time delta: 0.18s -> Time to sleep: -0.08s
+[May 23, 2023 18:40:49 UTC] [DEBUG | tcp] Time delta: 0.16s -> Time to sleep: -0.06s
+[May 23, 2023 18:40:49 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:49 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:49 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:49 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:49 UTC] [DEBUG | tcp] Time delta: 0.18s -> Time to sleep: -0.08s
+[May 23, 2023 18:40:50 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:50 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:50 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:50 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:50 UTC] [DEBUG | tcp] Time delta: 0.17s -> Time to sleep: -0.07s
+[May 23, 2023 18:40:50 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:40:50] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:41:38 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:41:38] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:41:38 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:41:38] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:41:38 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:41:38 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:41:38 UTC] [INFO | api_cipher_suite] TLS Scanner not found in /tmp/testssl.sh
+[May 23, 2023 18:41:38 UTC] [INFO | api_cipher_suite] Cloning: https://github.com/drwetter/testssl.sh.git
+[May 23, 2023 18:41:38 UTC] [INFO | api_cipher_suite] Cloning into https://github.com/drwetter/testssl.sh.git
+[May 23, 2023 18:41:38 UTC] [DEBUG | util] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+[May 23, 2023 18:41:38 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:41:38 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=3.0', '--progress', '--', 'https://github.com/drwetter/testssl.sh.git', '/tmp/testssl.sh'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:41:38 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:41:38] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:42:12 UTC] [INFO | api_cipher_suite] Proceeding to scan
+[May 23, 2023 18:42:35 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:42:35] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:44:59 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:44:59] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:44:59 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:44:59] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:44:59 UTC] [INFO | api_cipher_suite] TLS Scanner found in /tmp/testssl.sh
+[May 23, 2023 18:44:59 UTC] [INFO | api_cipher_suite] Proceeding to scan
+[May 23, 2023 18:44:59 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:44:59] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:45:05 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:45:05] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:45:21 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:45:21] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:45:21 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:45:21] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:45:21 UTC] [INFO | api_cipher_suite] TLS Scanner found in /tmp/testssl.sh
+[May 23, 2023 18:45:21 UTC] [INFO | api_cipher_suite] Proceeding to scan
+[May 23, 2023 18:45:22 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:45:22] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:45:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:45:39] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:46:19 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 18:46:19 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 18:53:48 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:53:48] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:53:48 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:53:48] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:53:48 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:53:48 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:53:48 UTC] [INFO | api_cipher_suite] TLS Scanner found in /tmp/testssl.sh
+[May 23, 2023 18:53:48 UTC] [INFO | api_cipher_suite] Proceeding to scan
+[May 23, 2023 18:53:48 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:53:48] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:05 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:05] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:18 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:18] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:18 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:18] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:18 UTC] [INFO | api_cipher_suite] TLS Scanner found in /tmp/testssl.sh
+[May 23, 2023 18:54:18 UTC] [INFO | api_cipher_suite] Proceeding to scan
+[May 23, 2023 18:54:18 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:18] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:22 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:22] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:46 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:46] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:46 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:46] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:47 UTC] [INFO | repo_cipher_scan] crypto-detector not found in /root
+[May 23, 2023 18:54:47 UTC] [INFO | repo_cipher_scan] Cloning: https://github.com/Wind-River/crypto-detector
+[May 23, 2023 18:54:47 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/Wind-River/crypto-detector.git
+[May 23, 2023 18:54:47 UTC] [DEBUG | util] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+[May 23, 2023 18:54:47 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:54:47 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/Wind-River/crypto-detector.git', '/root/crypto-detector/'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:54:47 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:47] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:54:47 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 18:54:47 UTC] [INFO | repo_cipher_scan] Default directory paths: /root/gitrepo/data/
+[May 23, 2023 18:54:47 UTC] [INFO | repo_cipher_scan] Cloning Git repo: atlantis
+[May 23, 2023 18:54:47 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/prateek22/atlantis.git
+[May 23, 2023 18:54:47 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:54:47 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/prateek22/atlantis.git', '/root/gitrepo/data/atlantis'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:54:49 UTC] [INFO | repo_cipher_scan] crypto-detector found in /root
+[May 23, 2023 18:54:49 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 18:54:49 UTC] [INFO | repo_cipher_scan] Default directory already exists: /root/gitrepo/data/
+[May 23, 2023 18:54:49 UTC] [INFO | repo_cipher_scan] Cloning Git repo: pysslscan
+[May 23, 2023 18:54:49 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/DinoTools/pysslscan
+[May 23, 2023 18:54:49 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:54:49 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/DinoTools/pysslscan', '/root/gitrepo/data/pysslscan'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:54:50 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:54:50] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:55:36 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:55:36] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:55:36 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:55:36] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:55:36 UTC] [INFO | repo_cipher_scan] crypto-detector found in /root
+[May 23, 2023 18:55:36 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 18:55:36 UTC] [INFO | repo_cipher_scan] Default directory already exists: /root/gitrepo/data/
+[May 23, 2023 18:55:36 UTC] [INFO | repo_cipher_scan] Previosuly cloned instance found. Removing before proceeding.
+[May 23, 2023 18:55:36 UTC] [INFO | repo_cipher_scan] Cloning Git repo: pysslscan
+[May 23, 2023 18:55:36 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/DinoTools/pysslscan
+[May 23, 2023 18:55:36 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:55:36 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/DinoTools/pysslscan', '/root/gitrepo/data/pysslscan'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:55:36 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:55:36] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:55:37 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:55:37] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:57:55 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 18:57:55 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 18:58:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:58:39] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:58:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:58:39] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 18:58:39 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:58:39 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:58:39 UTC] [INFO | repo_cipher_scan] crypto-detector not found in /root
+[May 23, 2023 18:58:39 UTC] [INFO | repo_cipher_scan] Cloning: https://github.com/Wind-River/crypto-detector
+[May 23, 2023 18:58:39 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/Wind-River/crypto-detector.git
+[May 23, 2023 18:58:39 UTC] [DEBUG | util] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+[May 23, 2023 18:58:39 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:58:39 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/Wind-River/crypto-detector.git', '/root/crypto-detector/'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:58:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:58:39] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 18:58:39 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 18:58:39 UTC] [INFO | repo_cipher_scan] Default directory paths: /root/gitrepo/data/
+[May 23, 2023 18:58:39 UTC] [INFO | repo_cipher_scan] Cloning Git repo: atlantis
+[May 23, 2023 18:58:39 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/prateek22/atlantis.git
+[May 23, 2023 18:58:39 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:58:39 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/prateek22/atlantis.git', '/root/gitrepo/data/atlantis'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:58:41 UTC] [INFO | repo_cipher_scan] crypto-detector found in /root
+[May 23, 2023 18:58:41 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 18:58:41 UTC] [INFO | repo_cipher_scan] Default directory already exists: /root/gitrepo/data/
+[May 23, 2023 18:58:41 UTC] [INFO | repo_cipher_scan] Cloning Git repo: pysslscan
+[May 23, 2023 18:58:41 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/DinoTools/pysslscan
+[May 23, 2023 18:58:41 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 18:58:41 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/DinoTools/pysslscan', '/root/gitrepo/data/pysslscan'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 18:58:42 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 18:58:42] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 19:01:23 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 19:01:23 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 19:09:33 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:09:33] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 19:09:34 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:09:34] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 19:09:34 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:09:34 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:09:34 UTC] [INFO | repo_cipher_scan] crypto-detector not found in /root
+[May 23, 2023 19:09:34 UTC] [INFO | repo_cipher_scan] Cloning: https://github.com/Wind-River/crypto-detector
+[May 23, 2023 19:09:34 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/Wind-River/crypto-detector.git
+[May 23, 2023 19:09:34 UTC] [DEBUG | util] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+[May 23, 2023 19:09:34 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:09:34 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/Wind-River/crypto-detector.git', '/root/crypto-detector/'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 19:09:34 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:09:34] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 19:09:36 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 19:09:36 UTC] [INFO | repo_cipher_scan] Default directory paths: /root/gitrepo/data/
+[May 23, 2023 19:09:36 UTC] [INFO | repo_cipher_scan] Cloning Git repo: atlantis
+[May 23, 2023 19:09:36 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/prateek22/atlantis.git
+[May 23, 2023 19:09:36 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:09:36 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/prateek22/atlantis.git', '/root/gitrepo/data/atlantis'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 19:09:37 UTC] [INFO | repo_cipher_scan] crypto-detector found in /root
+[May 23, 2023 19:09:37 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 19:09:37 UTC] [INFO | repo_cipher_scan] Default directory already exists: /root/gitrepo/data/
+[May 23, 2023 19:09:37 UTC] [INFO | repo_cipher_scan] Cloning Git repo: pysslscan
+[May 23, 2023 19:09:37 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/DinoTools/pysslscan
+[May 23, 2023 19:09:37 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:09:37 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/DinoTools/pysslscan', '/root/gitrepo/data/pysslscan'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 19:09:38 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:09:38] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 19:16:25 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 19:16:25 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 19:16:55 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:16:55] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 19:16:55 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:16:55] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 19:16:55 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:16:55 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:16:55 UTC] [INFO | repo_cipher_scan] crypto-detector not found in /root
+[May 23, 2023 19:16:55 UTC] [INFO | repo_cipher_scan] Cloning: https://github.com/Wind-River/crypto-detector
+[May 23, 2023 19:16:55 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/Wind-River/crypto-detector.git
+[May 23, 2023 19:16:55 UTC] [DEBUG | util] Failed checking if running in CYGWIN due to: FileNotFoundError(2, 'No such file or directory')
+[May 23, 2023 19:16:55 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:16:55 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/Wind-River/crypto-detector.git', '/root/crypto-detector/'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 19:16:55 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:16:55] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 19:16:56 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 19:16:56 UTC] [INFO | repo_cipher_scan] Default directory paths: /root/gitrepo/data/
+[May 23, 2023 19:16:56 UTC] [INFO | repo_cipher_scan] Cloning Git repo: atlantis
+[May 23, 2023 19:16:56 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/prateek22/atlantis.git
+[May 23, 2023 19:16:56 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:16:56 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/prateek22/atlantis.git', '/root/gitrepo/data/atlantis'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 19:16:57 UTC] [INFO | repo_cipher_scan] crypto-detector found in /root
+[May 23, 2023 19:16:57 UTC] [INFO | repo_cipher_scan] Proceeding to scan
+[May 23, 2023 19:16:57 UTC] [INFO | repo_cipher_scan] Default directory already exists: /root/gitrepo/data/
+[May 23, 2023 19:16:57 UTC] [INFO | repo_cipher_scan] Cloning Git repo: pysslscan
+[May 23, 2023 19:16:57 UTC] [INFO | repo_cipher_scan] Cloning into https://github.com/DinoTools/pysslscan
+[May 23, 2023 19:16:57 UTC] [DEBUG | cmd] Popen(['git', 'version'], cwd=/backend, universal_newlines=False, shell=None, istream=None)
+[May 23, 2023 19:16:57 UTC] [DEBUG | cmd] Popen(['git', 'clone', '-v', '--branch=master', '--progress', '--', 'https://github.com/DinoTools/pysslscan', '/root/gitrepo/data/pysslscan'], cwd=/backend, universal_newlines=True, shell=None, istream=None)
+[May 23, 2023 19:16:58 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 19:16:58] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 20:18:17 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 20:18:17] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 20:18:17 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 20:18:17] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 21:53:30 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 21:53:30 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 21:55:12 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 21:55:12] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 21:55:12 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 21:55:12] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 21:58:33 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 21:58:33 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 21:59:01 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 21:59:01] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 21:59:01 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 21:59:01] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 21:59:01 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 21:59:01] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 21:59:01 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 21:59:01] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:09:30 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 22:09:30 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 22:21:29 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 22:21:29 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 22:23:31 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 23, 2023 22:23:31 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 23, 2023 22:24:24 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:24:24] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:24:24 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:24:24] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:24:27 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:24:27] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:24:33 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:24:33] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:24:33 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:24:33] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:24:34 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:24:34] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:32 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:32] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:32 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:32] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:32 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:32] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:32 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:32] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:37 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:37] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:38 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:38] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:58 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:58] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:58 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:58] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:58 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:58] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:25:58 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:25:58] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:10 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:10] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:10 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:10] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:11 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:11] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:11 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:11] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:24 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:24] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:24 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:24] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:30 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:30] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:30 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:30] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:30 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:30] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:30 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:30] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:35 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:35] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:35 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:35] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:39] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:39] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:39] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:26:39 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:26:39] "POST /scan HTTP/1.1" 200 -
+[May 23, 2023 22:31:40 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:31:40] "OPTIONS /scan HTTP/1.1" 200 -
+[May 23, 2023 22:31:40 UTC] [INFO | _internal] 172.18.0.1 - - [23/May/2023 22:31:40] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 15:30:29 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 15:30:29] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 15:30:29 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 15:30:29] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 15:59:40 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 24, 2023 15:59:40 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 24, 2023 16:00:53 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:00:53] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 16:00:53 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:00:53] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loading modules ...
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package name: sslscan.module.handler
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.handler' from '/usr/local/lib/python3.9/site-packages/sslscan/module/handler/__init__.py'>
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/handler
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.smtp' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.tcp' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.http' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.rdp' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.imap' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.ldap' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.pop3' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.udp' successfully
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package name: sslscan.module.rating
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.rating' from '/usr/local/lib/python3.9/site-packages/sslscan/module/rating/__init__.py'>
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/rating
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.rbsec' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.ssllabs' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.builtin' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.none' successfully
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package name: sslscan.module.report
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.report' from '/usr/local/lib/python3.9/site-packages/sslscan/module/report/__init__.py'>
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/report
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.report.terminal' successfully
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package name: sslscan.module.scan
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.scan' from '/usr/local/lib/python3.9/site-packages/sslscan/module/scan/__init__.py'>
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/scan
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_imap' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.client_ciphers' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_ciphers' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.vuln_heartbleed' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_scsv' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:00:53] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_elliptic_curves' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_http' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_certificate' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_renegotiation' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_compression' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_smtp' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_preferred_ciphers' successfully
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_pop3' successfully
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value 'ssl2' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value of option 'ssl2' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value 'ssl3' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value of option 'ssl3' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value 'tls10' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value of option 'tls10' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value 'tls11' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value of option 'tls11' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value 'tls12' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | config] Set value of option 'tls12' to 'True'
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Loading handler from URI: google.com
+[May 24, 2023 16:00:53 UTC] [DEBUG | __init__] Extracted config values: {}
+[May 24, 2023 16:00:53 UTC] [INFO | __init__] Running scan module '<sslscan.module.scan.server_ciphers.ServerCiphers object at 0xffff98584cd0>' ...
+[May 24, 2023 16:00:58 UTC] [DEBUG | tcp] Time delta: 5.02s -> Time to sleep: -4.92s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.04s -> Time to sleep: 0.06s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.04s -> Time to sleep: 0.06s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.04s -> Time to sleep: 0.06s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:00:59 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.07s -> Time to sleep: 0.03s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.04s -> Time to sleep: 0.06s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.12s -> Time to sleep: -0.02s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.04s -> Time to sleep: 0.06s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:01:00 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:01:01 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:01:01 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:01:01 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:01:01 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 16:01:01 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 16:01:01 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 16:01:01 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 16:01:01 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:01] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 16:01:10 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:10] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 16:01:10 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:10] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 16:01:13 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:13] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 16:01:15 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:15] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 16:01:16 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:16] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 16:01:18 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:18] "OPTIONS /listAllAlgoSpec HTTP/1.1" 200 -
+[May 24, 2023 16:01:18 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 16:01:18] "POST /listAllAlgoSpec HTTP/1.1" 200 -
+[May 24, 2023 20:48:29 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:29] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 20:48:29 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:29] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loading modules ...
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package name: sslscan.module.handler
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.handler' from '/usr/local/lib/python3.9/site-packages/sslscan/module/handler/__init__.py'>
+[May 24, 2023 20:48:30 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:30] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/handler
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.smtp' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.tcp' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.http' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.rdp' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.imap' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.ldap' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.pop3' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.udp' successfully
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package name: sslscan.module.rating
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.rating' from '/usr/local/lib/python3.9/site-packages/sslscan/module/rating/__init__.py'>
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/rating
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.rbsec' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.ssllabs' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.builtin' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.none' successfully
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package name: sslscan.module.report
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.report' from '/usr/local/lib/python3.9/site-packages/sslscan/module/report/__init__.py'>
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/report
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.report.terminal' successfully
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package name: sslscan.module.scan
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.scan' from '/usr/local/lib/python3.9/site-packages/sslscan/module/scan/__init__.py'>
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/scan
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_imap' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.client_ciphers' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_ciphers' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.vuln_heartbleed' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_scsv' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_elliptic_curves' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_http' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_certificate' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_renegotiation' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_compression' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_smtp' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_preferred_ciphers' successfully
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_pop3' successfully
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value 'ssl2' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value of option 'ssl2' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value 'ssl3' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value of option 'ssl3' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value 'tls10' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value of option 'tls10' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value 'tls11' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value of option 'tls11' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value 'tls12' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | config] Set value of option 'tls12' to 'True'
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Loading handler from URI: google.com
+[May 24, 2023 20:48:30 UTC] [DEBUG | __init__] Extracted config values: {}
+[May 24, 2023 20:48:30 UTC] [INFO | __init__] Running scan module '<sslscan.module.scan.server_ciphers.ServerCiphers object at 0xffff99739070>' ...
+[May 24, 2023 20:48:35 UTC] [DEBUG | tcp] Time delta: 5.03s -> Time to sleep: -4.93s
+[May 24, 2023 20:48:35 UTC] [DEBUG | tcp] Time delta: 0.26s -> Time to sleep: -0.16s
+[May 24, 2023 20:48:35 UTC] [DEBUG | tcp] Time delta: 0.33s -> Time to sleep: -0.23s
+[May 24, 2023 20:48:35 UTC] [DEBUG | tcp] Time delta: 0.13s -> Time to sleep: -0.03s
+[May 24, 2023 20:48:35 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:36 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.06s -> Time to sleep: 0.04s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.04s -> Time to sleep: 0.06s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.05s -> Time to sleep: 0.05s
+[May 24, 2023 20:48:37 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 20:48:38 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:38] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 20:48:43 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:43] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 20:48:43 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:43] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loading modules ...
+[May 24, 2023 20:48:43 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:43] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package name: sslscan.module.handler
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.handler' from '/usr/local/lib/python3.9/site-packages/sslscan/module/handler/__init__.py'>
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/handler
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.smtp' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.tcp' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.http' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.rdp' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.imap' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.ldap' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.pop3' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.handler.udp' successfully
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package name: sslscan.module.rating
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.rating' from '/usr/local/lib/python3.9/site-packages/sslscan/module/rating/__init__.py'>
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/rating
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.rbsec' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.ssllabs' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.builtin' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.rating.none' successfully
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package name: sslscan.module.report
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.report' from '/usr/local/lib/python3.9/site-packages/sslscan/module/report/__init__.py'>
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/report
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.report.terminal' successfully
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package name: sslscan.module.scan
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base package: <module 'sslscan.module.scan' from '/usr/local/lib/python3.9/site-packages/sslscan/module/scan/__init__.py'>
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Base path: /usr/local/lib/python3.9/site-packages/sslscan/module/scan
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_imap' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.client_ciphers' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_ciphers' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.vuln_heartbleed' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_scsv' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_elliptic_curves' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_http' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_certificate' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_renegotiation' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_compression' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_smtp' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.server_preferred_ciphers' successfully
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Loaded 'sslscan.module.scan.protocol_pop3' successfully
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value 'ssl2' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value of option 'ssl2' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value 'ssl3' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value of option 'ssl3' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value 'tls10' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value of option 'tls10' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value 'tls11' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value of option 'tls11' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value 'tls12' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | config] Set value of option 'tls12' to 'True'
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Loading handler from URI: cisco.com
+[May 24, 2023 20:48:43 UTC] [DEBUG | __init__] Extracted config values: {}
+[May 24, 2023 20:48:43 UTC] [INFO | __init__] Running scan module '<sslscan.module.scan.server_ciphers.ServerCiphers object at 0xffff984fbe80>' ...
+[May 24, 2023 20:48:48 UTC] [DEBUG | tcp] Time delta: 5.04s -> Time to sleep: -4.94s
+[May 24, 2023 20:48:48 UTC] [DEBUG | tcp] Time delta: 0.09s -> Time to sleep: 0.01s
+[May 24, 2023 20:48:48 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.08s -> Time to sleep: 0.02s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.08s -> Time to sleep: 0.02s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.08s -> Time to sleep: 0.02s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.09s -> Time to sleep: 0.01s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.11s -> Time to sleep: -0.01s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.09s -> Time to sleep: 0.01s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.09s -> Time to sleep: 0.01s
+[May 24, 2023 20:48:49 UTC] [DEBUG | tcp] Time delta: 0.10s -> Time to sleep: -0.00s
+[May 24, 2023 20:48:49 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 20:48:49] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:00:57 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 24, 2023 22:00:57 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 24, 2023 22:05:03 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 24, 2023 22:05:03 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 24, 2023 22:06:01 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:06:01] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:06:02 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:06:02] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:06:24 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:06:24] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:06:24 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:06:24] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:06:24 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:06:24] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:06:24 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:06:24] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:08:11 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 24, 2023 22:08:11 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 24, 2023 22:08:44 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:08:44] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:08:44 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:08:44] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:08:48 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:08:48] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:08:48 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 812, in start_scan
+    scan_results = terraform_scan.get_scan_results('terraform.tf')
+  File "/backend/microservices/terraform_scan.py", line 27, in get_scan_results
+    if check_executable(executable_name):
+NameError: name 'executable_name' is not defined
+[May 24, 2023 22:08:48 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:08:48] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[May 24, 2023 22:09:51 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 24, 2023 22:09:51 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 24, 2023 22:10:23 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:10:23] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:10:23 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:10:23] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:10:27 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:10:27] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:10:27 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 812, in start_scan
+    scan_results = terraform_scan.get_scan_results('terraform.tf')
+  File "/backend/microservices/terraform_scan.py", line 30, in get_scan_results
+    print(f"{executable_name} is not installed.")
+NameError: name 'executable_name' is not defined
+[May 24, 2023 22:10:27 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:10:27] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[May 24, 2023 22:11:27 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 24, 2023 22:11:27 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 24, 2023 22:11:59 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:11:59] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:12:00 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:12:00] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:12:03 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:12:03] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:12:03 UTC] [INFO | terraform_scan] Terrascan is not installed. Calling installer.
+[May 24, 2023 22:12:15 UTC] [INFO | terraform_scan] Terrascan is successfully installed.
+[May 24, 2023 22:12:37 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:12:37] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:18:17 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:18:17] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:18:17 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:18:17] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:21:21 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 24, 2023 22:21:21 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 24, 2023 22:21:48 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:21:48] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:21:49 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:21:49] "POST /scan HTTP/1.1" 200 -
+[May 24, 2023 22:21:57 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:21:57] "OPTIONS /scan HTTP/1.1" 200 -
+[May 24, 2023 22:21:57 UTC] [INFO | terraform_scan] Terrascan is not installed. Calling installer.
+[May 24, 2023 22:22:07 UTC] [INFO | terraform_scan] Terrascan is successfully installed.
+[May 24, 2023 22:22:28 UTC] [INFO | _internal] 172.18.0.1 - - [24/May/2023 22:22:28] "POST /scan HTTP/1.1" 200 -
+[May 26, 2023 14:54:44 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 26, 2023 14:54:44 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 26, 2023 15:12:17 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 26, 2023 15:12:17 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[May 26, 2023 15:21:15 UTC] [INFO | _internal] 172.18.0.1 - - [26/May/2023 15:21:15] "OPTIONS /scan HTTP/1.1" 200 -
+[May 26, 2023 15:21:16 UTC] [INFO | _internal] 172.18.0.1 - - [26/May/2023 15:21:16] "POST /scan HTTP/1.1" 200 -
+[May 26, 2023 20:52:38 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[May 26, 2023 20:52:38 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m

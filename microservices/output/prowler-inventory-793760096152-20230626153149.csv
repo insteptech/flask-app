@@ -1,0 +1,6 @@
+AWS_AccountID,AWS_Region,AWS_Partition,AWS_Service,AWS_ResourceType,AWS_ResourceID,AWS_ResourceARN,AWS_Tags
+793760096152,,aws,iam,policy,custom-prowler-policy,arn:aws:iam::793760096152:policy/custom-prowler-policy,
+793760096152,,aws,iam,policy,AWSLambdaBasicExecutionRole-ed24d2c5-48b3-4e7a-bd14-fc618a8d1a51,arn:aws:iam::793760096152:policy/service-role/AWSLambdaBasicExecutionRole-ed24d2c5-48b3-4e7a-bd14-fc618a8d1a51,
+793760096152,,aws,iam,role,cloudmapper-lambda-role-4cof3lj2,arn:aws:iam::793760096152:role/service-role/cloudmapper-lambda-role-4cof3lj2,
+793760096152,,aws,iam,user,test-user,arn:aws:iam::793760096152:user/test-user,
+793760096152,us-east-1,aws,s3,bucket,new-bucket-test-prowler,arn:aws:s3:us-east-1::new-bucket-test-prowler,[]

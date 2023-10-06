@@ -1,0 +1,475 @@
+[June 07, 2023 15:51:28 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 15:51:28 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 15:51:53 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:51:53] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 15:51:53 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:51:53] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 15:53:24 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 15:53:24 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 15:56:09 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 15:56:09 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 15:57:09 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 15:57:09 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 15:57:31 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:57:31] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 15:57:31 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:57:31] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 15:57:33 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:57:33] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 15:58:12 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:58:12] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 15:58:12 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:58:12] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 15:58:12 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 15:58:12 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:58:12] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 15:58:25 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 15:58:28 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 79, in scan_cloud_app
+    identified_resources = get_resources()
+  File "/backend/microservices/cloud_app_scan.py", line 34, in get_resources
+    with open(f'/backend/output/{output_file_name}', 'r') as resources_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/backend/output/None'
+[June 07, 2023 15:58:28 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 15:58:28] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 16:07:03 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:07:03] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:07:03 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:07:03] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:07:03 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:07:03] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:08:16 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 91, in scan_cloud_app
+    edges.append({"source":resource["service_name"], "target":resource["resource_id"]})
+KeyError: 'service_name'
+[June 07, 2023 16:08:16 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:08:16] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 16:10:19 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:10:19] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:10:19 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:10:19] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:10:19 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:10:19] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:11:34 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 91, in scan_cloud_app
+    edges.append({"source":resource["service"], "target":resource["resource_id"]})
+KeyError: 'service_name'
+[June 07, 2023 16:11:34 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:11:34] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 16:12:55 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 16:12:55 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 16:13:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:13:50] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:13:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:13:50] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:14:03 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:14:03] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:14:03 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:14:03] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:14:03 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 16:14:03 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:14:03] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:14:15 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 16:15:30 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:15:30] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:15:56 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:15:56] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:15:56 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:15:56] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:16:11 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:16:11] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:16:11 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:16:11] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:16:11 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:16:11] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:17:25 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:17:25] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:20:51 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 16:20:51 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 16:21:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:21:39] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:21:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:21:39] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:21:49 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:21:49] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:21:49 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:21:49] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:21:49 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 16:21:49 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:21:49] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:22:02 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 16:23:13 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:23:13] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:28:47 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 16:28:47 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 16:29:49 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:29:49] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:29:49 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:29:49] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:29:56 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:29:56] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:29:56 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:29:56] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:29:56 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 16:29:57 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:29:57] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:30:09 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 16:31:25 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:31:25] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:35:15 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 16:35:15 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 16:36:28 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:36:28] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:36:28 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:36:28] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:36:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:36:39] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:36:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:36:39] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:36:39 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 16:36:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:36:39] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:36:51 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 16:38:05 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:38:05] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:46:34 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 16:46:34 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 16:47:33 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:47:33] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:47:34 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:47:34] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:00 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:48:00] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:00 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:48:00] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:00 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:48:00] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:00 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:48:00] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:40 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:48:40] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:40 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:48:40] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:41 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 16:48:41 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:48:41] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:48:53 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 16:50:08 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 16:50:08] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 16:59:27 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 16:59:27 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 20:26:01 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:01] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:01 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:01] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:02 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:02] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:04 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 95, in scan_cloud_app
+    identified_resources = get_resources()
+  File "/backend/microservices/cloud_app_scan.py", line 49, in get_resources
+    with open(f'/backend/output/{output_file_name}', 'r') as resources_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/backend/output/None'
+[June 07, 2023 20:26:04 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:04] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:26:09 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:09] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:09 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:09] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:13 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:13] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:13 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:13] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:15 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:15] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:15 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:15] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:15 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:15] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:26:17 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 95, in scan_cloud_app
+    identified_resources = get_resources()
+  File "/backend/microservices/cloud_app_scan.py", line 49, in get_resources
+    with open(f'/backend/output/{output_file_name}', 'r') as resources_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/backend/output/None'
+[June 07, 2023 20:26:17 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:26:17] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:27:44 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:27:44] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:27:44 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:27:44] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:27:44 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:27:44] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:27:46 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 95, in scan_cloud_app
+    identified_resources = get_resources()
+  File "/backend/microservices/cloud_app_scan.py", line 49, in get_resources
+    with open(f'/backend/output/{output_file_name}', 'r') as resources_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/backend/output/None'
+[June 07, 2023 20:27:46 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:27:46] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:28:02 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:02] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:02 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:02] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:03 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:03] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:04 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 95, in scan_cloud_app
+    identified_resources = get_resources()
+  File "/backend/microservices/cloud_app_scan.py", line 49, in get_resources
+    with open(f'/backend/output/{output_file_name}', 'r') as resources_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/backend/output/None'
+[June 07, 2023 20:28:04 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:04] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:28:19 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:19] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:19 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:19] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:20 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:20] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:22 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 95, in scan_cloud_app
+    identified_resources = get_resources()
+  File "/backend/microservices/cloud_app_scan.py", line 49, in get_resources
+    with open(f'/backend/output/{output_file_name}', 'r') as resources_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/backend/output/None'
+[June 07, 2023 20:28:22 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:22] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:28:51 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:51] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:51 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:51] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:51 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:51] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:28:53 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 95, in scan_cloud_app
+    identified_resources = get_resources()
+  File "/backend/microservices/cloud_app_scan.py", line 49, in get_resources
+    with open(f'/backend/output/{output_file_name}', 'r') as resources_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/backend/output/None'
+[June 07, 2023 20:28:53 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:28:53] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:31:24 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 20:31:24 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 20:31:58 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:31:58] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:31:58 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:31:58] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:07 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:07] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:07 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:07] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:07 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:07] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:07 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:07] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:08 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 818, in start_scan
+    from microservices import cloud_app_scan
+  File "/backend/microservices/cloud_app_scan.py", line 7, in <module>
+    import pexpect
+ModuleNotFoundError: No module named 'pexpect'
+[June 07, 2023 20:32:08 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:08] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:32:09 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:09] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:12 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 818, in start_scan
+    from microservices import cloud_app_scan
+  File "/backend/microservices/cloud_app_scan.py", line 7, in <module>
+    import pexpect
+ModuleNotFoundError: No module named 'pexpect'
+[June 07, 2023 20:32:12 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:12] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:32:12 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:12] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:39] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:39] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:39 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 20:32:39 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:32:39] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:32:51 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 20:34:09 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:09] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:25 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:25] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:25 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:25] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:27 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:27] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:50] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:50] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:50] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:50] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:34:51 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:34:51] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:35:02 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:35:02] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:35:02 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:35:02] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:35:02 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:35:02] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:36:04 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 96, in scan_cloud_app
+    scan_results = get_scan_analysis()
+  File "/backend/microservices/cloud_app_scan.py", line 67, in get_scan_analysis
+    scan_results_content = json.loads(scan_results_content_json)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20332 column 3 (char 695599)
+[June 07, 2023 20:36:04 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:36:04] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:36:09 UTC] [ERROR | app] Exception on /scan [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/backend/app.py", line 819, in start_scan
+    scan_results = cloud_app_scan.scan_cloud_app(access_key_id, secret_access_key, scan_target_type)
+  File "/backend/microservices/cloud_app_scan.py", line 96, in scan_cloud_app
+    scan_results = get_scan_analysis()
+  File "/backend/microservices/cloud_app_scan.py", line 67, in get_scan_analysis
+    scan_results_content = json.loads(scan_results_content_json)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20332 column 3 (char 695599)
+[June 07, 2023 20:36:09 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:36:09] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+[June 07, 2023 20:45:37 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:45:37] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:45:37 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:45:37] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:45:37 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:45:37] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:46:53 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:46:53] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 20:59:08 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 20:59:08 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 20:59:51 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:59:51] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 20:59:52 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 20:59:52] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:00:06 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:00:06] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 21:00:06 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:00:06] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 21:00:06 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:00:06] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:00:06 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:00:06] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:00:11 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 21:00:11 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:00:11] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:00:23 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 21:01:38 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:01:38] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:19:16 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 21:19:16 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 21:20:25 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:20:25] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 21:20:25 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:20:25] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:25:00 UTC] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+[June 07, 2023 21:25:00 UTC] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[June 07, 2023 21:29:38 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:29:38] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 21:29:38 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:29:38] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:29:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:29:50] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 21:29:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:29:50] "OPTIONS /scan HTTP/1.1" 200 -
+[June 07, 2023 21:29:50 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:29:50] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:29:51 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:29:51] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:29:53 UTC] [INFO | cloud_app_scan] Prowler is not installed. Calling installer.
+[June 07, 2023 21:29:53 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:29:53] "POST /scan HTTP/1.1" 200 -
+[June 07, 2023 21:30:06 UTC] [INFO | cloud_app_scan] Prowler is successfully installed.
+[June 07, 2023 21:31:20 UTC] [INFO | _internal] 172.18.0.1 - - [07/Jun/2023 21:31:20] "POST /scan HTTP/1.1" 200 -
+[June 08, 2023 16:16:54 UTC] [INFO | _internal] 172.18.0.1 - - [08/Jun/2023 16:16:54] "OPTIONS /scan HTTP/1.1" 200 -
+[June 08, 2023 16:16:55 UTC] [INFO | _internal] 172.18.0.1 - - [08/Jun/2023 16:16:55] "POST /scan HTTP/1.1" 200 -
+[June 08, 2023 16:21:23 UTC] [INFO | _internal] 172.18.0.1 - - [08/Jun/2023 16:21:23] "OPTIONS /scan HTTP/1.1" 200 -
+[June 08, 2023 16:21:23 UTC] [INFO | terraform_scan] Terrascan is not installed. Calling installer.
+[June 08, 2023 16:21:34 UTC] [INFO | terraform_scan] Terrascan is successfully installed.
+[June 08, 2023 16:21:55 UTC] [INFO | _internal] 172.18.0.1 - - [08/Jun/2023 16:21:55] "POST /scan HTTP/1.1" 200 -
