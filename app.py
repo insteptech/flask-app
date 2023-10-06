@@ -66,12 +66,13 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 ALLOWED_EXTENSIONS = {'txt', 'sql'}
 
-with open('/backend/pqc.config.json','r') as config_file:
+with open('pqc.config.json','r') as config_file:
     config = json.load(config_file)
 
 
 token = config.get("ACCESS_TOKEN")
 db_host = config.get("DB_HOST")
+db_port = config.get("DB_PORT")
 repo_db = config.get("DB_DATABASE")
 db_user = config.get("DB_USER")
 pass_word = config.get("DB_PASSWORD")
@@ -79,6 +80,7 @@ server_ip = config.get("HOST_IP")
 valid_protocols = config.get("VALID_PROTOCOLS")
 
 app.config['MYSQL_HOST'] = db_host
+app.config['MYSQL_PORT'] = db_port
 app.config['MYSQL_DATABASE'] = repo_db
 app.config['MYSQL_USER'] = db_user
 app.config['MYSQL_PASSWORD'] = pass_word
@@ -92,7 +94,8 @@ mydb = connector.connect(
     host=app.config['MYSQL_HOST'],
     database=app.config['MYSQL_DATABASE'],
     user=app.config['MYSQL_USER'],
-    password=app.config['MYSQL_PASSWORD']
+    password=app.config['MYSQL_PASSWORD'],
+    port = app.config['MYSQL_PORT']
 )
 
 # Change to include cipher name validation
