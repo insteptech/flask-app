@@ -50,16 +50,16 @@ dictConfig(
                 "class": "logging.StreamHandler",
                 "formatter": "default",
             },
-            "time-rotate": {
-                "class": "logging.handlers.TimedRotatingFileHandler",
-                "filename": "pqc_analyze.log",
-                "when": "D",
-                "interval": 2,
-                "backupCount": 5,
-                "formatter": "default",
-            },
+            # "time-rotate": {
+            #     "class": "logging.handlers.TimedRotatingFileHandler",
+            #     "filename": "pqc_analyze.log",
+            #     "when": "D",
+            #     "interval": 2,
+            #     "backupCount": 5,
+            #     "formatter": "default",
+            # },
         },
-        "root": {"level": "DEBUG", "handlers": ["console", "time-rotate"]},
+        "root": {"level": "DEBUG", "handlers": ["console"]},
     }
 )
 
