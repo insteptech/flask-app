@@ -236,6 +236,11 @@ def hello_world():
 @app.route("/home")
 def homepage():
     return "<p>Hello, World! This Is Home Page</p>"
+@app.route("/postRequest", methods=['POST'])
+def postRequest():
+     algo_name = request.json['algo_name']
+     return"<p>Hello, World! This Is Home Page for : " + algo_name + " :  </p>"
+
 
 @app.route("/algoSpec", methods=['POST'])
 def algo_spec():
