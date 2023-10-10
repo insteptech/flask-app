@@ -231,7 +231,7 @@ def repo_url_validation(repo_name):
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return "<p>Hello, World oo!</p>"
 
 @app.route("/home")
 def homepage():
