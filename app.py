@@ -526,7 +526,7 @@ def scan_client():
     shared_cipher_suite = cipher_suite['shared']
     if shared_cipher_suite == None:
         return "Failed to connect with the target over TLS..!"
-    # scan_result, nodes, edges, global_risk_factor = get_scan_results(scan_target, shared_cipher_suite)
+    scan_result, nodes, edges, global_risk_factor = get_scan_results(scan_target, shared_cipher_suite)
     scan_status = "Target: " + scan_target + ':' + scan_target_port + "; PQC Secure: " + ("No" if scan_result[2][0]['Unsafe']>0 else "Yes")
     return {"scan_result":scan_result, "graph": {"nodes":nodes, "edges":edges}, "scan_details":[{"params":"Scan Details", "values" : scan_status}, {"params":"Quantum Risk Factor", "values":global_risk_factor}]}
 
