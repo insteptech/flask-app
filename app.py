@@ -453,7 +453,7 @@ def get_scan_results(scan_target, cipher_suite):
             })
             safe += 1
             safe_risk_factor += tls_record['risk_factor']
-            nodes.append({"id":tls_record['name'],"color":"green"})
+            nodes.append({"id":tls_record['name'],"color":"#90EE90"})
             edges.append({"source":cipher_suite[tls_record['name']], "target":tls_record['name']})
         else:
             detectors.append({
@@ -464,8 +464,8 @@ def get_scan_results(scan_target, cipher_suite):
                 'quantum_safe': 'No'
             })
             unsafe += 1
-            unsafe_risk_factor += tls_record['risk_factor']
-            nodes.append({"id":tls_record['name'], "color":"red"})
+            unsafe_risk_factor += tls_record['risk_factor'] 
+            nodes.append({"id":tls_record['name'], "color":"#F75D59"})
             edges.append({"source":cipher_suite[tls_record['name']], "target":tls_record['name']})
     stats = [{'Safe': safe, 'Unsafe': unsafe}]
     pie_chart_data = [{ "title": 'safe', "value": safe, "color": '#90EE90' }, { "title": 'unsafe', "value": unsafe, "color": '#F75D59' }]
