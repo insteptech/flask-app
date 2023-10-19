@@ -20,6 +20,10 @@ import json
 import argparse
 
 available_dockers = ['ubuntu','red hat','kali']
+def root_dir():
+    return os.path.abspath(os.path.dirname(__file__))
+
+echo root_dir()
 
 def get_algos(scan_os):
 
