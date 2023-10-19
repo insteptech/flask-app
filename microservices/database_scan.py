@@ -25,7 +25,7 @@ service_user = "root"
 service_password = "secret"
 
 # Project DB
-with open('../pqc.config.json','r') as config_file:
+with open('./pqc.config.json','r') as config_file:
     config = json.load(config_file)
 
 
