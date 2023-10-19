@@ -21,10 +21,8 @@ import json
 import argparse
 
 available_dockers = ['ubuntu','red hat','kali']
-def root_dir():
-    return os.path.abspath(os.path.dirname(__file__))
 
-print root_dir()
+
 
 def get_algos(scan_os):
 
@@ -41,7 +39,7 @@ def get_algos(scan_os):
     parsed_algorithm_info = {}
     if scan_os in available_dockers:
         if scan_os == "ubuntu":
-            print os.path.join(root_dir(), "ubuntu.json")
+          
             with open('/microservices/file_system_info/red_hat.json') as ubuntu:
                 crypto_content = json.loads(ubuntu.read())
             parsed_algorithm_info = crypto_content
