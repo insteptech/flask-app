@@ -15,6 +15,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 import docker
+import os
 import re
 import json
 import argparse
@@ -23,7 +24,7 @@ available_dockers = ['ubuntu','red hat','kali']
 def root_dir():
     return os.path.abspath(os.path.dirname(__file__))
 
-echo root_dir()
+print root_dir()
 
 def get_algos(scan_os):
 
@@ -36,12 +37,12 @@ def get_algos(scan_os):
         - String of scan result source details
         - Dictionary of cipher algorithm details
     """
-    src = os.path.join(root_dir(), filename)
+
     parsed_algorithm_info = {}
     if scan_os in available_dockers:
         if scan_os == "ubuntu":
-            src = os.path.join(root_dir(), "ubuntu.json")
-            with open(src) as ubuntu:
+            print os.path.join(root_dir(), "ubuntu.json")
+            with open('/microservices/file_system_info/red_hat.json') as ubuntu:
                 crypto_content = json.loads(ubuntu.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "red hat":
