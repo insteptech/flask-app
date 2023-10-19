@@ -36,22 +36,22 @@ def get_algos(scan_os):
     parsed_algorithm_info = {}
     if scan_os in available_dockers:
         if scan_os == "ubuntu":
-            with open('file_system_info/ubuntu.json') as ubuntu:
+            with open('/microservices/file_system_info/ubuntu.json') as ubuntu:
                 crypto_content = json.loads(ubuntu.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "red hat":
-            with open('file_system_info/red_hat.json') as redhat:
+            with open('/microservices/file_system_info/red_hat.json') as redhat:
                 crypto_content = json.loads(redhat.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "kali":
-            with open('file_system_info/kali.json') as kali:
+            with open('/microservices/file_system_info/kali.json') as kali:
                 crypto_content = json.loads(kali.read())
             parsed_algorithm_info = crypto_content
         return "/proc/crypto on latest docker image", parsed_algorithm_info
     else:
         if scan_os == "windows":
             # Read from existing information about cryptographic algorithms supported on Windows
-            with open('./file_system_info/windows_info.txt', 'r') as windows_info_file:
+            with open('/microservices/file_system_info/windows_info.txt', 'r') as windows_info_file:
                 for line in windows_info_file.readlines():
                     # readlines preserves next line character, so while tokenizing each line we need to remove the line terminator
                     extracted_info = line[:-1].split(',')
