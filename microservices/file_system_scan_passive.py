@@ -36,11 +36,12 @@ def get_algos(scan_os):
         - String of scan result source details
         - Dictionary of cipher algorithm details
     """
-
+    src = os.path.join(root_dir(), filename)
     parsed_algorithm_info = {}
     if scan_os in available_dockers:
         if scan_os == "ubuntu":
-            with open('/microservices/file_system_info/ubuntu.json') as ubuntu:
+            src = os.path.join(root_dir(), "ubuntu.json")
+            with open(src) as ubuntu:
                 crypto_content = json.loads(ubuntu.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "red hat":
