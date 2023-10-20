@@ -43,11 +43,11 @@ def get_algos(scan_os):
                 crypto_content = json.loads(ubuntu.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "red hat":
-            with open('red_hat.json') as redhat:
+            with open('microservices/file_system_info/red_hat.json') as redhat:
                 crypto_content = json.loads(redhat.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "kali":
-            with open('kali.json') as kali:
+            with open('microservices/file_system_info/kali.json') as kali:
                 crypto_content = json.loads(kali.read())
             parsed_algorithm_info = crypto_content
         return "/proc/crypto on latest docker image", parsed_algorithm_info
