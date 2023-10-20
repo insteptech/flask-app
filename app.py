@@ -929,11 +929,11 @@ def scan_terraform():
     # Format sql statement to a single line statement
     terraform_statement = scan_params['scan_target_statement']
 
-    with open('terraform.tf', 'w') as terraform_file:
+    with open('/microservices/terraform.tf', 'w') as terraform_file:
         terraform_file.write(terraform_statement)
 
     from microservices import terraform_scan
-    scan_results = terraform_scan.get_scan_results('terraform.tf')
+    scan_results = terraform_scan.get_scan_results('/microservices/terraform.tf')
 
     return scan_results
 
