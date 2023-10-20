@@ -233,6 +233,11 @@ def repo_url_validation(repo_name):
 def hello_world():
     return "<p>Hello, World oo!</p>"
 
+@app.route("/root")
+def homepage():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    return ROOT_DIR
+
 @app.route("/home")
 def homepage():
     return "<p>Hello, World! This Is Home Page</p>"
@@ -464,6 +469,7 @@ def get_scan_results(scan_target, cipher_suite):
                 'quantum_safe': 'No'
             })
             unsafe += 1
+            
             unsafe_risk_factor += tls_record['risk_factor'] 
             nodes.append({"id":tls_record['name'], "color":"#F75D59"})
             edges.append({"source":cipher_suite[tls_record['name']], "target":tls_record['name']})
@@ -715,7 +721,8 @@ def scan_repo():
 @app.route("/scanFS", methods = ['POST'])
 def scan_fs():
     scan_params = request.json
-    
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    print(ROOT_DIR)
     # Extract values from request body
     # What is the scan target?
     scan_target = scan_params['target'].strip()
