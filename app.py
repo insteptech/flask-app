@@ -234,7 +234,7 @@ def hello_world():
     return "<p>Hello, World oo!</p>"
 
 @app.route("/root")
-def homepage():
+def root():
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     return ROOT_DIR
 
