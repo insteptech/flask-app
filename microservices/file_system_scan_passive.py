@@ -43,7 +43,7 @@ def get_algos(scan_os):
     if scan_os in available_dockers:
         if scan_os == "ubuntu":
           
-            parsed_algorithm_info = rootDirectory()
+            parsed_algorithm_info = "rootDirectory()"
         elif scan_os == "red hat":
             with open('/microservices/file_system_info/red_hat.json') as redhat:
                 crypto_content = json.loads(redhat.read())
