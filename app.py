@@ -66,8 +66,11 @@ dictConfig(
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 ALLOWED_EXTENSIONS = {'txt', 'sql'}
+def rootDirectory():
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    return ROOT_DIR
 
-with open('pqc.config.json','r') as config_file:
+with open(rootDirectory() +'/pqc.config.json','r') as config_file:
     config = json.load(config_file)
 
 
@@ -228,6 +231,8 @@ def repo_url_validation(repo_name):
                 return url
     else:
         return None
+
+
 
 @app.route("/")
 def hello_world():
