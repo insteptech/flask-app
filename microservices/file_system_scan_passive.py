@@ -39,7 +39,7 @@ def get_algos(scan_os):
     parsed_algorithm_info = {}
     if scan_os in available_dockers:
         if scan_os == "ubuntu":
-            with open('ubuntu.json') as ubuntu:
+            with open('microservices/file_system_info/ubuntu.json') as ubuntu:
                 crypto_content = json.loads(ubuntu.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "red hat":
