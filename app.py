@@ -70,7 +70,7 @@ def rootDirectory():
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     return ROOT_DIR
 
-with open(rootDirectory() +'/pqc.config.json','r') as config_file:
+with open(rootDirectory() +'pqc.config.json','r') as config_file:
     config = json.load(config_file)
 
 
@@ -753,69 +753,68 @@ def scan_fs():
     except:
         scan_target_type = ""
     from microservices import file_system_scan_passive
-    # scan_source, scan_details = file_system_scan_passive.get_algos(scan_target_type)
-    # scan_cipher_list = [x for x in scan_details.keys()]
-    # safety_check = check_algo_pqc_safety(scan_cipher_list)
-    # nodes = []
-    # edges = []
-    # nodes.append({"id":scan_target, "size":1500})
-    # safe = 0
-    # unsafe = 0
-    # safe_risk_factor = 0
-    # unsafe_risk_factor = 0
-    # global_risk_factor = 0
-    # detectors = []
-    # for cipher_record in safety_check['source_algo_record']:
-    #     if cipher_record['pqc_safe'] == True and int(scan_details[cipher_record['name']][0]) >= int(cipher_record['keysize']): #and cipher_suite[tls_record['name']]=='TLSv13'
-    #         detectors.append({
-    #             'name': cipher_record['name'],
-    #             'remediation': cipher_record['remediation'],
-    #             'risk_factor': cipher_record['risk_factor'],
-    #             'keysize': str(scan_details[cipher_record['name']][0]) + " - " + str(scan_details[cipher_record['name']][1]),
-    #             'quantum_safe': 'Yes'
-    #         })
-    #         safe += 1
-    #         safe_risk_factor += cipher_record['risk_factor']
-    #         nodes.append({"id":cipher_record['name'],"color":"green", "size":600})
-    #         edges.append({"source":scan_target, "target":cipher_record['name']})
-    #     elif cipher_record['pqc_safe'] == True and int(scan_details[cipher_record['name']][1]) < int(cipher_record['keysize']): #and cipher_suite[tls_record['name']]=='TLSv13'
-    #         detectors.append({
-    #             'name': cipher_record['name'],
-    #             'remediation': cipher_record['remediation'],
-    #             'risk_factor': 0.5,
-    #             'keysize': str(scan_details[cipher_record['name']][0]) + " - " + str(scan_details[cipher_record['name']][1]),
-    #             'quantum_safe': 'No'
-    #         })
-    #         unsafe += 1
-    #         unsafe_risk_factor += 0.5
-    #         nodes.append({"id":cipher_record['name'],"color":"yellow", "size":600})
-    #         edges.append({"source":scan_target, "target":cipher_record['name']})
-    #     else:
-    #         detectors.append({
-    #             'name': cipher_record['name'],
-    #             'remediation': cipher_record['remediation'],
-    #             'risk_factor': 1.0,
-    #             'keysize': str(scan_details[cipher_record['name']][0]) + " - " + str(scan_details[cipher_record['name']][1]),
-    #             'quantum_safe': 'No'
-    #         })
-    #         unsafe += 1
-    #         unsafe_risk_factor += cipher_record['risk_factor']
-    #         nodes.append({"id":cipher_record['name'], "color":"red", "size":600})
-    #         edges.append({"source":scan_target, "target":cipher_record['name']})
-    #     nodes.append({"id":scan_details[cipher_record['name']][0],"color":"grey"})
-    #     edges.append({"source":cipher_record['name'], "target":scan_details[cipher_record['name']][0]})
-    #     nodes.append({"id":scan_details[cipher_record['name']][1],"color":"grey"})
-    #     edges.append({"source":cipher_record['name'], "target":scan_details[cipher_record['name']][1]})
-    # stats = [{'Safe': safe, 'Unsafe': unsafe}]
-    # pie_chart_data = [{ "title": 'safe', "value": safe, "color": '#90EE90' }, { "title": 'unsafe', "value": unsafe, "color": '#F75D59' }]
-    #     #print(pie_chart_data)
-    # if safe != 0:
-    #     global_risk_factor = round(unsafe_risk_factor/(unsafe+safe),2)
-    # else:
-    #     global_risk_factor = 1
-    # scan_status = "Type: File System Scan; PQC Secure: " + ("No" if stats[0]['Unsafe']>0 else "Yes")
-    # return {"scan_result":[detectors,pie_chart_data,stats], "graph": {"nodes":nodes, "edges":edges}, "scan_details":[{"params":"Scan Details", "values" : scan_status}, {"params":"Quantum Risk Factor", "values":global_risk_factor}, {"params":"Scan Source", "values": scan_source}]}
-    return file_system_scan_passive.get_algos(scan_target_type)
+    scan_source, scan_details = file_system_scan_passive.get_algos(scan_target_type)
+    scan_cipher_list = [x for x in scan_details.keys()]
+    safety_check = check_algo_pqc_safety(scan_cipher_list)
+    nodes = []
+    edges = []
+    nodes.append({"id":scan_target, "size":1500})
+    safe = 0
+    unsafe = 0
+    safe_risk_factor = 0
+    unsafe_risk_factor = 0
+    global_risk_factor = 0
+    detectors = []
+    for cipher_record in safety_check['source_algo_record']:
+        if cipher_record['pqc_safe'] == True and int(scan_details[cipher_record['name']][0]) >= int(cipher_record['keysize']): #and cipher_suite[tls_record['name']]=='TLSv13'
+            detectors.append({
+                'name': cipher_record['name'],
+                'remediation': cipher_record['remediation'],
+                'risk_factor': cipher_record['risk_factor'],
+                'keysize': str(scan_details[cipher_record['name']][0]) + " - " + str(scan_details[cipher_record['name']][1]),
+                'quantum_safe': 'Yes'
+            })
+            safe += 1
+            safe_risk_factor += cipher_record['risk_factor']
+            nodes.append({"id":cipher_record['name'],"color":"green", "size":600})
+            edges.append({"source":scan_target, "target":cipher_record['name']})
+        elif cipher_record['pqc_safe'] == True and int(scan_details[cipher_record['name']][1]) < int(cipher_record['keysize']): #and cipher_suite[tls_record['name']]=='TLSv13'
+            detectors.append({
+                'name': cipher_record['name'],
+                'remediation': cipher_record['remediation'],
+                'risk_factor': 0.5,
+                'keysize': str(scan_details[cipher_record['name']][0]) + " - " + str(scan_details[cipher_record['name']][1]),
+                'quantum_safe': 'No'
+            })
+            unsafe += 1
+            unsafe_risk_factor += 0.5
+            nodes.append({"id":cipher_record['name'],"color":"yellow", "size":600})
+            edges.append({"source":scan_target, "target":cipher_record['name']})
+        else:
+            detectors.append({
+                'name': cipher_record['name'],
+                'remediation': cipher_record['remediation'],
+                'risk_factor': 1.0,
+                'keysize': str(scan_details[cipher_record['name']][0]) + " - " + str(scan_details[cipher_record['name']][1]),
+                'quantum_safe': 'No'
+            })
+            unsafe += 1
+            unsafe_risk_factor += cipher_record['risk_factor']
+            nodes.append({"id":cipher_record['name'], "color":"red", "size":600})
+            edges.append({"source":scan_target, "target":cipher_record['name']})
+        nodes.append({"id":scan_details[cipher_record['name']][0],"color":"grey"})
+        edges.append({"source":cipher_record['name'], "target":scan_details[cipher_record['name']][0]})
+        nodes.append({"id":scan_details[cipher_record['name']][1],"color":"grey"})
+        edges.append({"source":cipher_record['name'], "target":scan_details[cipher_record['name']][1]})
+    stats = [{'Safe': safe, 'Unsafe': unsafe}]
+    pie_chart_data = [{ "title": 'safe', "value": safe, "color": '#90EE90' }, { "title": 'unsafe', "value": unsafe, "color": '#F75D59' }]
+        #print(pie_chart_data)
+    if safe != 0:
+        global_risk_factor = round(unsafe_risk_factor/(unsafe+safe),2)
+    else:
+        global_risk_factor = 1
+    scan_status = "Type: File System Scan; PQC Secure: " + ("No" if stats[0]['Unsafe']>0 else "Yes")
+    return {"scan_result":[detectors,pie_chart_data,stats], "graph": {"nodes":nodes, "edges":edges}, "scan_details":[{"params":"Scan Details", "values" : scan_status}, {"params":"Quantum Risk Factor", "values":global_risk_factor}, {"params":"Scan Source", "values": scan_source}]}
 
 @app.route("/scanDatabase", methods = ['POST'])
 def scan_database():

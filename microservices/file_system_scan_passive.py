@@ -23,9 +23,6 @@ import argparse
 available_dockers = ['ubuntu','red hat','kali']
 
 
-def rootDirectory():
-    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-    return ROOT_DIR
 
 def get_algos(scan_os):
 
@@ -42,14 +39,15 @@ def get_algos(scan_os):
     parsed_algorithm_info = {}
     if scan_os in available_dockers:
         if scan_os == "ubuntu":
-          
-            parsed_algorithm_info = "rootDirectory()"
+            with open('ubuntu.json') as ubuntu:
+                crypto_content = json.loads(ubuntu.read())
+            parsed_algorithm_info = crypto_content
         elif scan_os == "red hat":
-            with open('/microservices/file_system_info/red_hat.json') as redhat:
+            with open('red_hat.json') as redhat:
                 crypto_content = json.loads(redhat.read())
             parsed_algorithm_info = crypto_content
         elif scan_os == "kali":
-            with open('/microservices/file_system_info/kali.json') as kali:
+            with open('kali.json') as kali:
                 crypto_content = json.loads(kali.read())
             parsed_algorithm_info = crypto_content
         return "/proc/crypto on latest docker image", parsed_algorithm_info
