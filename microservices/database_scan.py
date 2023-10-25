@@ -21,8 +21,8 @@ import sys
 import subprocess
 import argparse
 
-service_user = "root"
-service_password = "secret"
+service_user = "quartz_db_user"
+service_password = "XZ9nyP4Znvn3y2rsVVBwnvG2gfjNvjDgfz8c3by"
 
 # Project DB
 with open('microservices/pqc.config.json','r') as config_file:
