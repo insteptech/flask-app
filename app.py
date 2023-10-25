@@ -70,7 +70,7 @@ def rootDirectory():
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
     return ROOT_DIR
 
-with open('pqc.config.json','r') as config_file:
+with open('/pqc.config.json','r') as config_file:
     config = json.load(config_file)
 
 
