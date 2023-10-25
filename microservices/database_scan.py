@@ -32,6 +32,7 @@ with open('microservices/pqc.config.json','r') as config_file:
 token = config.get("ACCESS_TOKEN")
 db_host = config.get("DB_HOST")
 repo_db = config.get("DB_DATABASE")
+db_port = config.get("DB_PORT")
 db_user = config.get("DB_USER")
 pass_word = config.get("DB_PASSWORD")
 server_ip = config.get("HOST_IP")
@@ -41,7 +42,8 @@ project_db = connector.connect(
     host=db_host,
     database=repo_db,
     user=db_user,
-    password=pass_word
+    password=pass_word,
+    port = db_port
 )
 
 # Specific Database Checks
