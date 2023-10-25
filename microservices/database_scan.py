@@ -83,8 +83,8 @@ def check_mysql(host,port):
     mydb = connector.connect(
         host=host,
         port=port,
-        user=service_user,
-        password=service_password,
+        user=db_user,
+        password=pass_word,
         database="mysql"
     )
     
