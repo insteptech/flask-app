@@ -80,13 +80,21 @@ def check_mysql(host,port):
 
     # Check connection to target host using service account credentials
     # Create MySQL connector to initiate connection with taget host
+    # mydb = connector.connect(
+    #     host=host,
+    #     port=port,
+    #     user=service_user,
+    #     password=service_password,
+    #     database="mysql"
+    # )
+    
     mydb = connector.connect(
-        host=host,
-        port=port,
-        user=service_user,
-        password=service_password,
-        database="mysql"
-    )
+    host=host,
+    database=repo_db,
+    user="quartz_db_user",
+    password="XZ9nyP4Znvn3y2rsVVBwnvG2gfjNvjDgfz8c3by",
+    port = port
+)
     
     if not mydb.is_connected():
         return "Failed to connect using service credentials..!"
