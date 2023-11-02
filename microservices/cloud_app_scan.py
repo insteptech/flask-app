@@ -66,7 +66,7 @@ def set_aws_credentials(access_key_id, secret_access_key):
     Output: N/A
     """
 
-    child = pexpect.popen_spawn.PopenSpawn("aws configure")
+    child = pexpect.run("aws configure")
     child.expect("AWS Access Key ID \[.*\]:")
     child.sendline(access_key_id)
     child.expect("AWS Secret Access Key \[.*\]:")
