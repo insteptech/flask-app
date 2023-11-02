@@ -77,6 +77,7 @@ def set_aws_credentials(access_key_id, secret_access_key):
     child.sendline('')
     child.wait()
     print("AWS configure command completed.")
+    return child
     
 
 def find_json_file(directory):
