@@ -57,6 +57,15 @@ def get_prowler():
 
 def set_aws_credentials(access_key_id, secret_access_key):
 
+    try:
+      output = pexpect.run('aws --version', encoding='utf-8')
+      if not "aws-cli" in output:
+         print('Error\n    AWS CLI not found, see here for further details\nhttps://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-install')
+         sys.exit(1)
+    except Exception as e:
+      print(e)
+      sys.exit(1)
+ 
     """
     Takes an AWS account access_key_id and secret_access_key as input and configures the local AWS credentials to use them as default.
 
@@ -66,6 +75,7 @@ def set_aws_credentials(access_key_id, secret_access_key):
     Output: N/A
     """
 
+      
     child = pexpect.run("aws configure",encoding='utf-8')
     child.expect("AWS Access Key ID \[.*\]:")
     child.sendline(access_key_id)
