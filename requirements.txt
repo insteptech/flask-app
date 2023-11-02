@@ -9,3 +9,4 @@ requests
 docker
 pexpect
 gevent
+prowler
