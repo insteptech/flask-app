@@ -87,8 +87,8 @@ def get_scan_results(terraform_file):
     scan_cmd = f"terrascan scan -f {terraform_file} -o json > temp.json"
     os.system(scan_cmd)
     with open('temp.json', 'r') as scan_result_file:
+        return scan_result_file
         scan_result = json.loads(scan_result_file.read())
-        return scan_result
     scan_summary = scan_result['results']['scan_summary']
     policies_validated = scan_summary['policies_validated']
     violated_policies = scan_summary['violated_policies']
