@@ -9,4 +9,4 @@ requests
 docker
 pexpect
 gevent
-prowler
+prowler==3.9.0
