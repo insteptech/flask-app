@@ -89,11 +89,11 @@ def check_mysql(host,port):
     # )
     
     mydb = connector.connect(
-    host=host,
-    database=repo_db,
+    host="quartz-db.csgmw2txhvkh.us-east-1.rds.amazonaws.com",
+    database="quartz_db",
     user="quartz_db_user",
     password="XZ9nyP4Znvn3y2rsVVBwnvG2gfjNvjDgfz8c3by",
-    port = port
+    port = 7788
 )
     
     if not mydb.is_connected():
