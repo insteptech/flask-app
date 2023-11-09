@@ -414,12 +414,15 @@ def check_pqc_safety(cipher_list):
     generated_query = tls_query_generator(cipher_list)
     results = sql_select(generated_query,tuple(cipher_list))
     output = []
-    print("Reesults",results,generated_query)
+    print("Reesults",results)
+    print("cipher_list",cipher_list)
+    print("tuple(cipher_list)",tuple(cipher_list))
     for result in results:
+        print("result Item",result)
         if result[1]==True:
             pqc_safe = True
         output.append({"name":result[0], "pqc_safe":result[1], "risk_factor":result[2], "remediation":result[3]})
-        print("putpue",output)
+    print("putpue",output)
     return {'is_safe': pqc_safe, "tls_algo_record": output}
 
 def check_algo_pqc_safety(cipher_list):
@@ -455,6 +458,7 @@ def get_scan_results(scan_target, cipher_suite):
     global_risk_factor = 0
     detectors = []
     for tls_record in safety_check['tls_algo_record']:
+        print("item","--"+tls_record + "--")
         if tls_record['pqc_safe'] == True and cipher_suite[tls_record['name']] not in ['SSLv3', 'TLSv1']:
             detectors.append({
                 'name': tls_record['name'],
