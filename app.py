@@ -458,7 +458,7 @@ def get_scan_results(scan_target, cipher_suite):
     global_risk_factor = 0
     detectors = []
     for tls_record in safety_check['tls_algo_record']:
-        print("item","--"+tls_record + "--")
+        print("item","--",tls_record , "--")
         if tls_record['pqc_safe'] == True and cipher_suite[tls_record['name']] not in ['SSLv3', 'TLSv1']:
             detectors.append({
                 'name': tls_record['name'],
