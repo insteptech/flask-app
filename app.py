@@ -414,15 +414,10 @@ def check_pqc_safety(cipher_list):
     generated_query = tls_query_generator(cipher_list)
     results = sql_select(generated_query,tuple(cipher_list))
     output = []
-    print("Reesults",results)
-    print("cipher_list",cipher_list)
-    print("tuple(cipher_list)",tuple(cipher_list))
     for result in results:
-        print("result Item",result)
         if result[1]==True:
             pqc_safe = True
         output.append({"name":result[0], "pqc_safe":result[1], "risk_factor":result[2], "remediation":result[3]})
-    print("putpue",output)
     return {'is_safe': pqc_safe, "tls_algo_record": output}
 
 def check_algo_pqc_safety(cipher_list):
@@ -458,7 +453,6 @@ def get_scan_results(scan_target, cipher_suite):
     global_risk_factor = 0
     detectors = []
     for tls_record in safety_check['tls_algo_record']:
-        print("item","--",tls_record , "--")
         if tls_record['pqc_safe'] == True and cipher_suite[tls_record['name']] not in ['SSLv3', 'TLSv1']:
             detectors.append({
                 'name': tls_record['name'],
@@ -543,9 +537,7 @@ def scan_client():
     shared_cipher_suite = cipher_suite['shared']
     if shared_cipher_suite == None:
         return "Failed to connect with the target over TLS..!"
-    print("shared",shared_cipher_suite,scan_target)
     scan_result, nodes, edges, global_risk_factor = get_scan_results(scan_target, shared_cipher_suite)
-    print("scan Target",scan_result, nodes, edges, global_risk_factor)
     scan_status = "Target: " + scan_target + ':' + scan_target_port + "; PQC Secure: " + ("No" if scan_result[2][0]['Unsafe']>0 else "Yes")
     return {"scan_result":scan_result, "graph": {"nodes":nodes, "edges":edges}, "scan_details":[{"params":"Scan Details", "values" : scan_status}, {"params":"Quantum Risk Factor", "values":global_risk_factor}]}
 
