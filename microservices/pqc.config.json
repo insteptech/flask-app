@@ -1,10 +1,10 @@
 {
 	"ACCESS_TOKEN": "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",
-	"DB_HOST":  "quartz-db.csgmw2txhvkh.us-east-1.rds.amazonaws.com",
+	"DB_HOST":  "flaskapp-db.csgmw2txhvkh.us-east-1.rds.amazonaws.com",
 	"DB_DATABASE":  "quartz_db",
 	"DB_USER": "quartz_db_user",
-	"DB_PORT": 7788,
-	"DB_PASSWORD": "XZ9nyP4Znvn3y2rsVVBwnvG2gfjNvjDgfz8c3by",
+	"DB_PORT": 3306,
+	"DB_PASSWORD": "Flaskapp1234",
 	"SECRET_KEY": "yFOY2pjTNJ8LiDurtNvp2ePNmEcLr28K3JG5nuKwGE8d7oWQya4VUlpdBqALww3V",
 	"RANDOM_KEY": "AJgxGxMokCt5izepRrn49diwGdPwuGNnQQUvQw9RmMQBNwdyk49hh53GmDWyeggG"
 }
